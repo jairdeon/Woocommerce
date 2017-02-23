@@ -1,3 +1,4 @@
+<?php
 // Get images and Gallery
 // Função criada (dizendo que o id é nulo (não obrigatório)
 function get_post_image($id = null){
@@ -24,7 +25,7 @@ function get_post_image($id = null){
 		$gallery = null;
 	}
   
-  // Data é	igual aos atributos, você pode usar qualquer um dos abaixo para obter os campos
+  // Data é igual aos atributos, você pode usar qualquer um dos abaixo para obter os campos
  $data = ['url' => wp_get_attachment_url(get_post_meta($id, '_thumbnail_id')[0]), 'img_id' => get_post_meta($id, '_thumbnail_id')[0], 'gallery' => $gallery];
 	
 	return (object) $data;
